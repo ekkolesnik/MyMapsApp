@@ -6,5 +6,6 @@ target 'MaspApp' do
   use_frameworks!
 
   pod 'GoogleMaps'
+  pod 'RealmSwift'
 
 end

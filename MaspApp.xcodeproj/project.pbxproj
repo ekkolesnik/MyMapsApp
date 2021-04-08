@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		858B3630261EFB8A00846B62 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B362E261EFB8A00846B62 /* Coordinate.swift */; };
+		858B3631261EFB8A00846B62 /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B362F261EFB8A00846B62 /* TrackModel.swift */; };
 		859FCE00251D213700597E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FCDFF251D213700597E37 /* AppDelegate.swift */; };
 		859FCE02251D213700597E37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FCE01251D213700597E37 /* SceneDelegate.swift */; };
 		859FCE04251D213700597E37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FCE03251D213700597E37 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		344336207FF6B4764CF1D19D /* Pods_MaspApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaspApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		858B362E261EFB8A00846B62 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		858B362F261EFB8A00846B62 /* TrackModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
 		859FCDFC251D213700597E37 /* MaspApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaspApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859FCDFF251D213700597E37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859FCE01251D213700597E37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +52,6 @@
 				C7E75703911CA08B3E7D6369 /* Pods-MaspApp.debug.xcconfig */,
 				C21E19D48102AB262101F804 /* Pods-MaspApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -58,6 +61,15 @@
 				344336207FF6B4764CF1D19D /* Pods_MaspApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		858B362D261EFB6E00846B62 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				858B362E261EFB8A00846B62 /* Coordinate.swift */,
+				858B362F261EFB8A00846B62 /* TrackModel.swift */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 		859FCDF3251D213700597E37 = {
@@ -81,6 +93,7 @@
 		859FCDFE251D213700597E37 /* MaspApp */ = {
 			isa = PBXGroup;
 			children = (
+				858B362D261EFB6E00846B62 /* DataBase */,
 				859FCDFF251D213700597E37 /* AppDelegate.swift */,
 				859FCE01251D213700597E37 /* SceneDelegate.swift */,
 				859FCE03251D213700597E37 /* ViewController.swift */,
@@ -104,6 +117,7 @@
 				859FCDF9251D213700597E37 /* Frameworks */,
 				859FCDFA251D213700597E37 /* Resources */,
 				28510D6DA2DF8D8DF020718A /* [CP] Copy Pods Resources */,
+				2CA49719B9180592C3FB567C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,6 +191,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MaspApp/Pods-MaspApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2CA49719B9180592C3FB567C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MaspApp/Pods-MaspApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MaspApp/Pods-MaspApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MaspApp/Pods-MaspApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C7575A2D339D748C66D68C1E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +240,8 @@
 				859FCE04251D213700597E37 /* ViewController.swift in Sources */,
 				859FCE00251D213700597E37 /* AppDelegate.swift in Sources */,
 				859FCE02251D213700597E37 /* SceneDelegate.swift in Sources */,
+				858B3631261EFB8A00846B62 /* TrackModel.swift in Sources */,
+				858B3630261EFB8A00846B62 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
