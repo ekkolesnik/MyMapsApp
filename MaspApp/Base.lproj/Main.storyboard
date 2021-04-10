@@ -42,7 +42,6 @@
                             <barButtonItem title="Выйти" id="TaQ-tA-Voh">
                                 <connections>
                                     <action selector="exitItemButton:" destination="BYZ-38-t0r" id="Qwe-kf-qNm"/>
-                                    <segue destination="Akc-Vk-55P" kind="show" identifier="toLoginController" id="4gt-Zz-UPp"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Отобразить" id="mdU-iI-ayv">
@@ -88,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T9U-tk-0ku">
-                                <rect key="frame" x="107" y="373" width="200" height="150"/>
+                                <rect key="frame" x="107" y="374" width="200" height="148.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8d-pZ-iXu">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="19.5"/>
@@ -104,20 +103,20 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hu1-iD-G4y">
-                                        <rect key="frame" x="0.0" y="40.5" width="200" height="18.5"/>
+                                        <rect key="frame" x="0.0" y="40.5" width="200" height="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bfb-KC-dqm">
-                                        <rect key="frame" x="0.0" y="69" width="200" height="1"/>
+                                        <rect key="frame" x="0.0" y="67.5" width="200" height="1"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="odH-gV-3GJ"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sk7-Wg-wlF">
-                                        <rect key="frame" x="0.0" y="80" width="200" height="30"/>
+                                        <rect key="frame" x="0.0" y="78.5" width="200" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.71572834370000005" blue="0.3588637932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Вход">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,7 +127,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GM4-xc-AAt">
-                                        <rect key="frame" x="0.0" y="120" width="200" height="30"/>
+                                        <rect key="frame" x="0.0" y="118.5" width="200" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.71572834370000005" blue="0.3588637932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Регистрация">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -172,7 +171,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6HM-AK-u99">
-                                <rect key="frame" x="107" y="393" width="200" height="110"/>
+                                <rect key="frame" x="107" y="394" width="200" height="108.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WB1-t1-kSo">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="19.5"/>
@@ -188,20 +187,20 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ww-m9-0sY">
-                                        <rect key="frame" x="0.0" y="40.5" width="200" height="18.5"/>
+                                        <rect key="frame" x="0.0" y="40.5" width="200" height="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="muK-yv-xuZ">
-                                        <rect key="frame" x="0.0" y="69" width="200" height="1"/>
+                                        <rect key="frame" x="0.0" y="67.5" width="200" height="1"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="OQu-ua-w2K"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbx-l4-PFo">
-                                        <rect key="frame" x="0.0" y="80" width="200" height="30"/>
+                                        <rect key="frame" x="0.0" y="78.5" width="200" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.71572834370000005" blue="0.3588637932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Зарегистрироваться">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -257,7 +256,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="d7A-Ov-tLX"/>
-        <segue reference="4gt-Zz-UPp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

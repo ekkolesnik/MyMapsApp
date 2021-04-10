@@ -149,7 +149,7 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     @IBAction func exitItemButton(_ sender: UIBarButtonItem) {
         UserDefaults.standard.setValue(false, forKey: "isLogin")
 //        performSegue(withIdentifier: "toLoginController", sender: sender)
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
     }
     
     
@@ -174,4 +174,3 @@ extension ViewController: CLLocationManagerDelegate {
         print(error.localizedDescription)
     }
 }
-
