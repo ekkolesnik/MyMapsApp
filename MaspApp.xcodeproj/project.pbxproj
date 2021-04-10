@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		858B3630261EFB8A00846B62 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B362E261EFB8A00846B62 /* Coordinate.swift */; };
 		858B3631261EFB8A00846B62 /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B362F261EFB8A00846B62 /* TrackModel.swift */; };
+		858B36402621F73800846B62 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B363E2621F73800846B62 /* User.swift */; };
+		858B36412621F73800846B62 /* RootSegue​.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B363F2621F73800846B62 /* RootSegue​.swift */; };
+		858B36472621F7BD00846B62 /* CheckAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B36442621F7BD00846B62 /* CheckAuthController.swift */; };
+		858B36482621F7BD00846B62 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B36452621F7BD00846B62 /* LoginController.swift */; };
+		858B36492621F7BD00846B62 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B36462621F7BD00846B62 /* RegistrationController.swift */; };
 		859FCE00251D213700597E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FCDFF251D213700597E37 /* AppDelegate.swift */; };
 		859FCE02251D213700597E37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FCE01251D213700597E37 /* SceneDelegate.swift */; };
 		859FCE04251D213700597E37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FCE03251D213700597E37 /* ViewController.swift */; };
@@ -22,6 +27,11 @@
 		344336207FF6B4764CF1D19D /* Pods_MaspApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaspApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		858B362E261EFB8A00846B62 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		858B362F261EFB8A00846B62 /* TrackModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
+		858B363E2621F73800846B62 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		858B363F2621F73800846B62 /* RootSegue​.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RootSegue​.swift"; sourceTree = "<group>"; };
+		858B36442621F7BD00846B62 /* CheckAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckAuthController.swift; sourceTree = "<group>"; };
+		858B36452621F7BD00846B62 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		858B36462621F7BD00846B62 /* RegistrationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		859FCDFC251D213700597E37 /* MaspApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaspApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859FCDFF251D213700597E37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859FCE01251D213700597E37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +82,26 @@
 			path = DataBase;
 			sourceTree = "<group>";
 		};
+		858B363D2621F71A00846B62 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				858B363F2621F73800846B62 /* RootSegue​.swift */,
+				858B363E2621F73800846B62 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		858B36432621F76900846B62 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				858B36442621F7BD00846B62 /* CheckAuthController.swift */,
+				858B36452621F7BD00846B62 /* LoginController.swift */,
+				858B36462621F7BD00846B62 /* RegistrationController.swift */,
+				859FCE03251D213700597E37 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		859FCDF3251D213700597E37 = {
 			isa = PBXGroup;
 			children = (
@@ -93,10 +123,11 @@
 		859FCDFE251D213700597E37 /* MaspApp */ = {
 			isa = PBXGroup;
 			children = (
+				858B36432621F76900846B62 /* Controller */,
+				858B363D2621F71A00846B62 /* Model */,
 				858B362D261EFB6E00846B62 /* DataBase */,
 				859FCDFF251D213700597E37 /* AppDelegate.swift */,
 				859FCE01251D213700597E37 /* SceneDelegate.swift */,
-				859FCE03251D213700597E37 /* ViewController.swift */,
 				859FCE05251D213700597E37 /* Main.storyboard */,
 				859FCE08251D213900597E37 /* Assets.xcassets */,
 				859FCE0A251D213900597E37 /* LaunchScreen.storyboard */,
@@ -237,10 +268,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				858B36472621F7BD00846B62 /* CheckAuthController.swift in Sources */,
 				859FCE04251D213700597E37 /* ViewController.swift in Sources */,
 				859FCE00251D213700597E37 /* AppDelegate.swift in Sources */,
+				858B36402621F73800846B62 /* User.swift in Sources */,
+				858B36482621F7BD00846B62 /* LoginController.swift in Sources */,
+				858B36412621F73800846B62 /* RootSegue​.swift in Sources */,
 				859FCE02251D213700597E37 /* SceneDelegate.swift in Sources */,
 				858B3631261EFB8A00846B62 /* TrackModel.swift in Sources */,
+				858B36492621F7BD00846B62 /* RegistrationController.swift in Sources */,
 				858B3630261EFB8A00846B62 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
