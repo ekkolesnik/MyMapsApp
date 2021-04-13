@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vfL-dc-1ep">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KCf-CI-icQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -11,9 +11,9 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MaspApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="MaspApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7q7-Sl-fGM" customClass="GMSMapView">
@@ -38,11 +38,19 @@
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" title="Отобразить" id="mdU-iI-ayv">
-                            <connections>
-                                <action selector="displayRoad:" destination="BYZ-38-t0r" id="Svw-QF-AbU"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Выйти" id="TaQ-tA-Voh">
+                                <connections>
+                                    <action selector="exitItemButton:" destination="BYZ-38-t0r" id="Qwe-kf-qNm"/>
+                                    <segue destination="Akc-Vk-55P" kind="show" identifier="toLoginController" id="4gt-Zz-UPp"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Отобразить" id="mdU-iI-ayv">
+                                <connections>
+                                    <action selector="displayRoad:" destination="BYZ-38-t0r" id="Svw-QF-AbU"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="7q7-Sl-fGM" id="ABn-80-N5x"/>
@@ -52,11 +60,187 @@
             </objects>
             <point key="canvasLocation" x="1069.5652173913045" y="110.49107142857143"/>
         </scene>
+        <!--Check Auth Controller-->
+        <scene sceneID="10E-Am-YlW">
+            <objects>
+                <viewController id="KCf-CI-icQ" customClass="CheckAuthController" customModule="MaspApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fn5-SA-Idm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="oDE-kd-BMz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="Akc-Vk-55P" kind="show" identifier="toLogin" customClass="RootSegue" customModule="MaspApp" customModuleProvider="target" id="9hU-K2-hIu"/>
+                        <segue destination="vfL-dc-1ep" kind="show" identifier="toMap" customClass="RootSegue" customModule="MaspApp" customModuleProvider="target" id="DsR-iT-xMf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATR-jc-D5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-316" y="-590"/>
+        </scene>
+        <!--Login Controller-->
+        <scene sceneID="qdd-FQ-mgh">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Akc-Vk-55P" customClass="LoginController" customModule="MaspApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Da8-tx-Zgz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T9U-tk-0ku">
+                                <rect key="frame" x="107" y="373" width="200" height="150"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8d-pZ-iXu">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="19.5"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3D-wS-PIj">
+                                        <rect key="frame" x="0.0" y="29.5" width="200" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="oPP-kw-5CR"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hu1-iD-G4y">
+                                        <rect key="frame" x="0.0" y="40.5" width="200" height="18.5"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bfb-KC-dqm">
+                                        <rect key="frame" x="0.0" y="69" width="200" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="odH-gV-3GJ"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sk7-Wg-wlF">
+                                        <rect key="frame" x="0.0" y="80" width="200" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.71572834370000005" blue="0.3588637932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Вход">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enterActionButton:" destination="Akc-Vk-55P" eventType="touchUpInside" id="PwM-7E-DYf"/>
+                                            <segue destination="vfL-dc-1ep" kind="show" identifier="enterSegua" id="d7A-Ov-tLX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GM4-xc-AAt">
+                                        <rect key="frame" x="0.0" y="120" width="200" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.71572834370000005" blue="0.3588637932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Регистрация">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registrationActionButton:" destination="Akc-Vk-55P" eventType="touchUpInside" id="yRx-mj-Me6"/>
+                                            <segue destination="K71-nO-MpT" kind="show" id="Ngc-2I-u7M"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="hlL-ea-SvQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BrO-ra-Fpt"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T9U-tk-0ku" firstAttribute="centerX" secondItem="Da8-tx-Zgz" secondAttribute="centerX" id="dmz-Wj-vGO"/>
+                            <constraint firstItem="T9U-tk-0ku" firstAttribute="centerY" secondItem="Da8-tx-Zgz" secondAttribute="centerY" id="fx1-Gz-awq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vbl-eO-TCv"/>
+                    <connections>
+                        <outlet property="enterButton" destination="Sk7-Wg-wlF" id="u63-KZ-1Kx"/>
+                        <outlet property="loginTextField" destination="U8d-pZ-iXu" id="Fwg-9b-fl2"/>
+                        <outlet property="passTextField" destination="hu1-iD-G4y" id="Tr5-Cq-Z7I"/>
+                        <outlet property="registrationButton" destination="GM4-xc-AAt" id="uir-dD-ofK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iX6-h5-9qV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-797.10144927536237" y="109.82142857142857"/>
+        </scene>
+        <!--Registration Controller-->
+        <scene sceneID="6ap-C0-49z">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="K71-nO-MpT" customClass="RegistrationController" customModule="MaspApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cIS-js-YBf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6HM-AK-u99">
+                                <rect key="frame" x="107" y="393" width="200" height="110"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WB1-t1-kSo">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="19.5"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzW-Xv-KcY">
+                                        <rect key="frame" x="0.0" y="29.5" width="200" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Q4k-Sr-hZQ"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ww-m9-0sY">
+                                        <rect key="frame" x="0.0" y="40.5" width="200" height="18.5"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="muK-yv-xuZ">
+                                        <rect key="frame" x="0.0" y="69" width="200" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="OQu-ua-w2K"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbx-l4-PFo">
+                                        <rect key="frame" x="0.0" y="80" width="200" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.71572834370000005" blue="0.3588637932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Зарегистрироваться">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registrationActionButton:" destination="K71-nO-MpT" eventType="touchUpInside" id="8qz-rF-Su4"/>
+                                            <segue destination="vfL-dc-1ep" kind="show" identifier="toMapController" id="YOF-iO-2U5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="jwu-8k-X2u"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7t0-kD-B8N"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6HM-AK-u99" firstAttribute="centerX" secondItem="cIS-js-YBf" secondAttribute="centerX" id="5he-ra-TFJ"/>
+                            <constraint firstItem="6HM-AK-u99" firstAttribute="centerY" secondItem="cIS-js-YBf" secondAttribute="centerY" id="KIQ-mE-D3P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Ev-s0-xew"/>
+                    <connections>
+                        <outlet property="loginTextField" destination="WB1-t1-kSo" id="qFe-2r-P7S"/>
+                        <outlet property="passwordTextField" destination="7Ww-m9-0sY" id="hUE-0m-wkc"/>
+                        <outlet property="registrationButton" destination="kbx-l4-PFo" id="c9I-hd-B2K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MMS-GP-AGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-797" y="814"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ETa-bZ-dLt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vfL-dc-1ep" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="vfL-dc-1ep" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="7Pt-bo-NqQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FgZ-rC-rYO">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -71,6 +255,10 @@
             <point key="canvasLocation" x="157.97101449275362" y="109.82142857142857"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="d7A-Ov-tLX"/>
+        <segue reference="4gt-Zz-UPp"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
