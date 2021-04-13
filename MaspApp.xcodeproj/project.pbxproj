@@ -14,6 +14,7 @@
 		858B36472621F7BD00846B62 /* CheckAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B36442621F7BD00846B62 /* CheckAuthController.swift */; };
 		858B36482621F7BD00846B62 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B36452621F7BD00846B62 /* LoginController.swift */; };
 		858B36492621F7BD00846B62 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B36462621F7BD00846B62 /* RegistrationController.swift */; };
+		858B365626220B1D00846B62 /* PrivacyProtectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B365526220B1D00846B62 /* PrivacyProtectionController.swift */; };
 		859FCE00251D213700597E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FCDFF251D213700597E37 /* AppDelegate.swift */; };
 		859FCE02251D213700597E37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FCE01251D213700597E37 /* SceneDelegate.swift */; };
 		859FCE04251D213700597E37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FCE03251D213700597E37 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		858B36442621F7BD00846B62 /* CheckAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckAuthController.swift; sourceTree = "<group>"; };
 		858B36452621F7BD00846B62 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		858B36462621F7BD00846B62 /* RegistrationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		858B365526220B1D00846B62 /* PrivacyProtectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyProtectionController.swift; sourceTree = "<group>"; };
 		859FCDFC251D213700597E37 /* MaspApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaspApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859FCDFF251D213700597E37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859FCE01251D213700597E37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		858B36432621F76900846B62 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				858B365526220B1D00846B62 /* PrivacyProtectionController.swift */,
 				858B36442621F7BD00846B62 /* CheckAuthController.swift */,
 				858B36452621F7BD00846B62 /* LoginController.swift */,
 				858B36462621F7BD00846B62 /* RegistrationController.swift */,
@@ -276,6 +279,7 @@
 				858B36412621F73800846B62 /* RootSegue​.swift in Sources */,
 				859FCE02251D213700597E37 /* SceneDelegate.swift in Sources */,
 				858B3631261EFB8A00846B62 /* TrackModel.swift in Sources */,
+				858B365626220B1D00846B62 /* PrivacyProtectionController.swift in Sources */,
 				858B36492621F7BD00846B62 /* RegistrationController.swift in Sources */,
 				858B3630261EFB8A00846B62 /* Coordinate.swift in Sources */,
 			);

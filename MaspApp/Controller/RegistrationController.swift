@@ -46,8 +46,7 @@ class RegistrationController: UIViewController {
         } catch {
             
         }
+        UserDefaults.standard.setValue(true, forKey: "isLogin")
         performSegue(withIdentifier: "toMapController", sender: sender)
     }
-    
-    
 }
