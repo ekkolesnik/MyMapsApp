@@ -7,5 +7,7 @@ target 'MaspApp' do
 
   pod 'GoogleMaps'
   pod 'RealmSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
 end
