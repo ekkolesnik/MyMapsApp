@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import RxSwift
 
 class LoginController: UIViewController {
 
@@ -15,8 +16,9 @@ class LoginController: UIViewController {
     @IBOutlet weak var enterButton: UIButton!
     @IBOutlet weak var registrationButton: UIButton!
     
-//    var realm: Realm?
-    var user: Results<User>?
+    let realm = try! Realm()
+    
+    var userObserver: Observable<Results<User>>?
     
     var login = ""
     var pass = ""
@@ -59,32 +61,22 @@ class LoginController: UIViewController {
   
         guard let login = loginTextField.text, let pass = passTextField.text else {return}
         
-        self.login = login
-        self.pass = pass
+        let user = realm.objects(User.self)
+            .filter("login = '\(String(describing: login))' AND password = '\(String(describing: pass))'")
         
-        do {
-            let realm = try Realm()
-            let user = realm.objects(User.self).filter("login = '\(String(describing: self.login))' AND password = '\(String(describing: self.pass))'")
-
-            self.user = user
-        } catch {
-            print(error)
-        }
-
-        realmLogin = ""
-        realmPass = ""
-
-        for i in self.user! {
-            realmLogin = i.login
-            realmPass = i.password
-        }
-
-        if login != realmLogin || pass != realmPass || login == ""  {
-            showAuthError()
-        } else {
+        userObserver = Observable.just(user)
+        userObserver?.map({ [unowned self] result -> User? in
+            guard let user = result.first(where: { $0.login == login && $0.password == pass})
+            else { showAuthError(); return nil }
+            
+            return user
+        })
+        .filter({ $0 != nil})
+        .subscribe(onNext: { [weak self] user in
             UserDefaults.standard.setValue(true, forKey: "isLogin")
-            performSegue(withIdentifier: "enterSegua", sender: AnyObject.self)
-        }
+            self?.performSegue(withIdentifier: "enterSegua", sender: AnyObject.self)
+        }).disposed(by: .init())
+        
     }
     
     @IBAction func registrationActionButton(_ sender: UIButton) {
