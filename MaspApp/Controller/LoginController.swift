@@ -15,7 +15,7 @@ class LoginController: UIViewController {
     @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var enterButton: UIButton!
     @IBOutlet weak var registrationButton: UIButton!
-    
+     
     let realm = try! Realm()
     
     var userObserver: Observable<Results<User>>?
